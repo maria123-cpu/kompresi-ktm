@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kompresi KTM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Tombol Help -->
+    <div class="help-circle" title="Bantuan">?</div>
+
+    <h2>Kompresi KTM Mahasiswa</h2>
+
+    <form id="formData">
+      <input type="text" id="nama" placeholder="Nama Lengkap" required>
+      <input type="text" id="nim" placeholder="NIM" required>
+      <input type="text" id="prodi" placeholder="Program Studi" required>
+      <input type="text" id="fakultas" placeholder="Fakultas" required>
+      <button type="button" id="lanjutUpload" disabled>Lanjutkan Upload</button>
+    </form>
+
+    <input type="file" id="uploadKTM" accept="image/*" style="display:none">
+    <img id="previewImage" src="" alt="Preview KTM" class="preview-img">
+
+    <button id="kompresBtn" disabled>Kompres Sekarang</button>
+    <div id="progress" class="progress"></div>
+
+    <img id="compressedImage" src="" alt="KTM Terkompresi" class="preview-img">
+    <p id="infoUkuran"></p>
+
+    <button id="simpanBtn" disabled>Simpan</button>
+    <a href="riwayat.html" class="btn-link">📄 Lihat Riwayat Kompresi</a>
+  </div>
+
+  <!-- Modal Help -->
+  <div id="helpModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Langkah-Langkah Kompresi KTM dengan Huffman Coding</h3>
+      <ol>
+        <li>Ambil gambar KTM dari pengguna.</li>
+        <li>Konversi gambar menjadi data biner.</li>
+        <li>Hitung frekuensi tiap simbol dalam data.</li>
+        <li>Buat pohon Huffman berdasarkan frekuensi.</li>
+        <li>Bangun kode Huffman (bit pendek untuk simbol sering).</li>
+        <li>Ganti simbol asli dengan kode Huffman.</li>
+        <li>Hasilkan gambar terkompresi.</li>
+        <li>Tampilkan ukuran sebelum dan sesudah.</li>
+      </ol>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
